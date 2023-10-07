@@ -6,8 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registrasi</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        
+        body{
+            background:cadetblue;
+        }
+    </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="dashboard">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="registrasi">DAFTAR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="login">LOGIN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
         <div id="main" class="d-flex align-items-center vh-100">
                     <div class="container">
                             <div class="card shadow m-auto" style="width: 400px">
