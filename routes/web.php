@@ -28,7 +28,7 @@ route::get('masyarakat',[MasyarakatController::class,'index']);
 route::get('dashboard',[MasyarakatController::class,'dashboard']);
 
 // dashboard admin
-route::get('dashboard/admin',[AdminController::class,'admin']);
+route::get('dashboard/utama',[AdminController::class,'admin']);
 
 // registrasi
 route::get('registrasi',[MasyarakatController::class,'registrasi']);
