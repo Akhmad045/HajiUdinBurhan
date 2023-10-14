@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Masyarakat;
+use App\Models\Pengaduan;
 use App\Models\Petugas;
+use App\Models\Tanggapan;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -14,6 +17,12 @@ class AdminController extends Controller
         return view('Admin.utama');
     }
     public function validasi(){
-        return view('Admin.validasi');
+        $lapor = new Pengaduan;
+        return view('Admin.validasi',['data'=>$lapor->all()]);
+
+    }
+    public function tanggapan(){
+        $tanggap = new Tanggapan;
+         return view();
     }
 }

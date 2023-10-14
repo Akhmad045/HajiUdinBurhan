@@ -44,3 +44,5 @@ route::post('laporan',[MasyarakatController::class,'laporan']);
 
 //validasi
 route::get('dashboard/validasi',[AdminController::class,'validasi']);
+//tanggapan
+route::get('dashboard/tanggapan',[AdminController::class,'tanggapan']);

@@ -16,14 +16,14 @@ class MasyarakatController extends Controller
         return view('Masyarakat.dashboard');
     }
     
-    public function registrasi(){
-        // buat objek 
-            return view('Masyarakat.registrasi');
-    }
+    // public function registrasi(){
+    //     // buat objek 
+    //         return view('Masyarakat.registrasi');
+    // }
     public function data(Request $request){
             // cek data yang dikirimkan
             $tes = $request->validate([
-                'nik'=>'required|unique:masyarakat|max:16',
+                'nik'=>'required|max:16',
                 'nama'=>'required',
                 'username'=>'required|min:6',
                 'password'=>'required|min:4',
@@ -59,6 +59,6 @@ class MasyarakatController extends Controller
     }
     public function laporan(){
         // buat objek
-        return view('Masyarakat.laporan');
+        return view('Masyarakat.laporan'); 
     }
 }
