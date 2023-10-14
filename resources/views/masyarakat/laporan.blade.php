@@ -25,7 +25,7 @@
                             Silahkan isi semua kolom!!
                         </div>
                     @endif
-                    <form action="{{ url('laporan') }}" method="POST">
+                    <form action="" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="nik" class="form-label">NIK</label>

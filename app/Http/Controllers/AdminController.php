@@ -22,7 +22,7 @@ class AdminController extends Controller
 
     }
     public function tanggapan(){
-        $tanggap = new Tanggapan;
-         return view();
+        $tanggap = new Pengaduan;
+         return view('Admin.Tanggapan',['tanggapi'=>$tanggap->all()]);
     }
 }

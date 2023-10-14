@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Masyarakat;
+use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 
 class MasyarakatController extends Controller
@@ -16,10 +17,10 @@ class MasyarakatController extends Controller
         return view('Masyarakat.dashboard');
     }
     
-    // public function registrasi(){
-    //     // buat objek 
-    //         return view('Masyarakat.registrasi');
-    // }
+    public function registrasi(){
+        // buat objek 
+            return view('Masyarakat.registrasi');
+    }
     public function data(Request $request){
             // cek data yang dikirimkan
             $tes = $request->validate([
@@ -40,7 +41,7 @@ class MasyarakatController extends Controller
                 'telpon'=>$request->telpon,
             ]);
             //return redirect('masyarakat/registrasi');
-            return back()->with('pesan','Selamat, anda sudah berhasil registrasi');
+            return redirect('registrasi')->with('pesan','Selamat, anda sudah berhasil registrasi');
     }
     public function login(){
         // buat objek
@@ -57,8 +58,32 @@ class MasyarakatController extends Controller
          
          return back()->with('pesan','username atau password salah');
     }
-    public function laporan(){
-        // buat objek
-        return view('Masyarakat.laporan'); 
+
+    public function buatlaporan(){
+        return view('Masyarakat.laporan');
+    }
+
+    public function laporan(Request $request){
+        // cek data yang dikirimkan
+        $tes = $request->validate([
+            'nik'=>'required|max:16',
+            'tanggal_pengaduan'=>'required|date',
+            'foto'=>'required',
+            'isi_laporan'=>'required'
+        ]);
+
+        // // upload image
+        // $image = $request->file('foto');
+        // $image->storeAs('public/posts', $image->hashName());
+
+        $akhmad = new Pengaduan();
+        $akhmad->create([
+            'nik'=>$request->nik,
+            'tanggal_pengaduan'=>$request->tanggal_pengaduan,
+            'foto'=>$request->foto,
+            'isi_laporan'=>$request->isi_laporan
+        ]);
+        //return redirect('masyarakat/registrasi');
+        return redirect('laporan')->with('pesan','Selamat, Laporan berhasil dikirim');
     }
 }

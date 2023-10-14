@@ -39,10 +39,11 @@ route::get('login',[MasyarakatController::class,'login']);
 route::post('login',[MasyarakatController::class,'ceklogin']);
 
 // laporan
-route::get('laporan',[MasyarakatController::class,'laporan']);
+route::get('laporan',[MasyarakatController::class,'buatlaporan']);
 route::post('laporan',[MasyarakatController::class,'laporan']);
 
 //validasi
 route::get('dashboard/validasi',[AdminController::class,'validasi']);
 //tanggapan
 route::get('dashboard/tanggapan',[AdminController::class,'tanggapan']);
+route::post('dashboard/tanggapan',[AdminController::class,'tanggapan']);

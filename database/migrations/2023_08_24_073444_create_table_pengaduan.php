@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('status',[0,'proses','selesai']);
             $table->timestamps();
             $table->primary('id_pengaduan');
+
         });
     }
 
