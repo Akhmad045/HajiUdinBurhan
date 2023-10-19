@@ -25,4 +25,17 @@ class AdminController extends Controller
         $tanggap = new Pengaduan;
          return view('Admin.Tanggapan',['tanggapi'=>$tanggap->all()]);
     }
+    public function ceklogin(Request $request){
+        $cek = new Petugas();
+        $cek = $cek->where('username',$request->input('username'))->where('password',$request->input('password'));
+
+        if($cek->exists()){
+            session([
+                'username'=>$request->input('username'),
+                'password'=>($request->input('password'))
+            ]);
+            return redirect('utama/admin');
+        }
+        return back();
+    }
 }

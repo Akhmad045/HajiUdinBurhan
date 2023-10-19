@@ -41,7 +41,7 @@ class MasyarakatController extends Controller
                 'telpon'=>$request->telpon,
             ]);
             //return redirect('masyarakat/registrasi');
-            return redirect('registrasi')->with('pesan','Selamat, anda sudah berhasil registrasi');
+            return redirect('masyarakat/registrasi')->with('pesan','Selamat, anda sudah berhasil registrasi');
     }
     public function login(){
         // buat objek
@@ -51,12 +51,14 @@ class MasyarakatController extends Controller
          $raden = new Masyarakat();
          // cek username dan password exists (ada) di tabel masyarakat
          if($raden->where('username',$request->input('username'))->where('password',$request->input('password'))->exists()){
-            return redirect('dashboard');
+            session([
+                'username'=>$request->input('username'),
+                'password'=>($request->input('password'))
+            ]);
+            return redirect('/masyarakat');
          }
-         
-        
-         
          return back()->with('pesan','username atau password salah');
+         
     }
 
     public function buatlaporan(){
@@ -84,6 +86,6 @@ class MasyarakatController extends Controller
             'isi_laporan'=>$request->isi_laporan
         ]);
         //return redirect('masyarakat/registrasi');
-        return redirect('laporan')->with('pesan','Selamat, Laporan berhasil dikirim');
+        return redirect('masyarakat/laporan')->with('pesan','Laporan berhasil dikirim');
     }
 }

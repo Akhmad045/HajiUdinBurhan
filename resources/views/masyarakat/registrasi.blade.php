@@ -16,7 +16,7 @@
                         Anda gagal registrasi
                     </div>
                 @endif
-                <form action="{{ url('data') }}" method="POST">
+                <form action="{{ url('masyarakat/registrasi') }}" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label for="nik" class="form-label">NIK</label>
