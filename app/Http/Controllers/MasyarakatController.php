@@ -16,7 +16,9 @@ class MasyarakatController extends Controller
     public function dashboard(){
         return view('Masyarakat.dashboard');
     }
-    
+    public function dash(){
+        return view('Masyarakat.dashboardlogin');
+    }
     public function registrasi(){
         // buat objek 
             return view('Masyarakat.registrasi');
@@ -55,7 +57,7 @@ class MasyarakatController extends Controller
                 'username'=>$request->input('username'),
                 'password'=>($request->input('password'))
             ]);
-            return redirect('/masyarakat');
+            return redirect('/masyarakat/dashboard');
          }
          return back()->with('pesan','username atau password salah');
          

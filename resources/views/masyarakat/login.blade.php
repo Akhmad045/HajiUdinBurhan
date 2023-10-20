@@ -17,7 +17,7 @@
                       Anda berhasil login
                   </div>
               @endif
-              <form action="{{ url('login') }}" method="POST">
+              <form action="{{ url('masyarakat/login') }}" method="POST">
                   @csrf
                   <div class="mb-3">
                       <label for="username" class="form-label">Username</label>

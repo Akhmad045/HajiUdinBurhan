@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class MasyarakatMiddleware
+class CekRole
 {
     /**
      * Handle an incoming request.
@@ -15,9 +15,6 @@ class MasyarakatMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!session('username')){
-            return redirect('masyarakat/dashboard');
-        }
         
         return $next($request);
     }

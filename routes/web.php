@@ -36,6 +36,8 @@ route::prefix('masyarakat')->group(function () {
     // login
     route::get('login', [MasyarakatController::class, 'login']);
     route::post('login', [MasyarakatController::class, 'ceklogin']);
+    // halaman sesudah login
+    route::get('dashboardl',[MasyarakatController::class,'dash']);
     
 
 });
@@ -43,11 +45,15 @@ route::prefix('admin')->group(function () {
     route::get('/',function(){
         return view('admin.utama');
     })->middleware(AdminMiddleware::class);
+    // dashboard admin
+    route::get('utama',[AdminController::class,'dashboard']);
+    // log
+    route::post('login', [AdminController::class, 'ceklogin']);
     //validasi
     route::get('validasi', [AdminController::class, 'validasi']);
     //tanggapan
     route::get('tanggapan', [AdminController::class, 'tanggapan']);
     route::post('tanggapan', [AdminController::class, 'tanggapan']);
     //login admin
-    route::post('login', [AdminController::class, 'ceklogin']);
+    route::post('login', [AdminController::class, 'celogin']);
 });
