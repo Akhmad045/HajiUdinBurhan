@@ -12,12 +12,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>Fitur 1</h3>
-                    <p>Deskripsi fitur 1. Anda dapat menggunakan fitur ini untuk melakukan hal-hal hebat.</p>
+                    <h3>Fitur Buat Laporan</h3>
+                    <p>Fitur ini untuk membuat laporan anda.</p>
                 </div>
                 <div class="col-md-4">
-                    <h3>Fitur 2</h3>
-                    <p>Deskripsi fitur 2. Ini membantu Anda dengan masalah-masalah spesifik yang Anda hadapi.</p>
+                    <h3>Fitur Logout</h3>
+                    <p>Ketika anda </p>
                 </div>
                 <div class="col-md-4">
                     <h3>Fitur 3</h3>

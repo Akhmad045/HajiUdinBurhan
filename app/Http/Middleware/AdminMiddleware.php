@@ -16,7 +16,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if(!session('admin')){
-            return redirect('admin/utama');
+            return redirect('admin/login');
         }
         return $next($request);
     }

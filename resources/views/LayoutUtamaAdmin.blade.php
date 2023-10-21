@@ -36,7 +36,7 @@
 
         </ul>
         <ul class="nav">
-            <li class="nav-item"><a href="layoututama" class="nav-link link-body-emphasis px-2">Logout</a></li>
+            <li class="nav-item"><a href="/admin/login" class="nav-link link-body-emphasis px-2">Logout</a></li>
         </ul>
     </div>
 </nav>

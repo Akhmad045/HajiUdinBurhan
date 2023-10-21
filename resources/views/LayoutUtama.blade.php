@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Dashboard</title>
     <style>
-        h1 {
-            justify-content: center;
-            padding: 100px 0 10px 0;
-            display: flex;
+        .jumbotron {
+            background-color: #007bff;
+            color: white;
+            padding: 100px 25px;
+            text-align: center;
         }
 
-        header {
-            justify-content: center;
-            display: flex;
+        .features {
+            padding: 50px 0;
+            background-color: white;
         }
     </style>
 </head>

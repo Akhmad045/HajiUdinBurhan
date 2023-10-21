@@ -47,13 +47,12 @@ route::prefix('admin')->group(function () {
     })->middleware(AdminMiddleware::class);
     // dashboard admin
     route::get('utama',[AdminController::class,'dashboard']);
-    // log
-    route::post('login', [AdminController::class, 'ceklogin']);
     //validasi
     route::get('validasi', [AdminController::class, 'validasi']);
     //tanggapan
     route::get('tanggapan', [AdminController::class, 'tanggapan']);
     route::post('tanggapan', [AdminController::class, 'tanggapan']);
     //login admin
-    route::post('login', [AdminController::class, 'celogin']);
+    route::post('login', [AdminController::class, 'celogin']);  
+    route::get('login', [AdminController::class, 'ceklogin']);
 });

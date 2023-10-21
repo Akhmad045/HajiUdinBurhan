@@ -5,7 +5,7 @@
  <div class="jumbotron">
   <h1>Selamat Datang di Layanan Pengaduan</h1>
   <p>Laporkan masalah Anda dan kami akan membantu Anda menyelesaikannya.</p>
-  <a class="btn btn-primary btn-lg" href="laporan" role="button">Buat Laporan Anda!</a>
+  <a class="btn btn-primary btn-lg" href="validasi" role="button">Lihat Laporan</a>
 </div>
 
 <!-- Fitur Layanan -->
