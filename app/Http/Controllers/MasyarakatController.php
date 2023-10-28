@@ -68,6 +68,9 @@ class MasyarakatController extends Controller
     }
 
     public function laporan(Request $request){
+        $foto = $request->file('foto');
+        $folder = 'upload';
+        $foto->move($folder,$foto->getClientOriginalName());     
         // cek data yang dikirimkan
         $tes = $request->validate([
             'nik'=>'required|max:16',

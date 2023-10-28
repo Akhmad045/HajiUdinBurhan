@@ -33,6 +33,7 @@
                     aria-current="page">Home</a></li>
             <li class="nav-item"><a href="validasi" class="nav-link link-body-emphasis px-2">Validasi</a></li>
             <li class="nav-item"><a href="tanggapan" class="nav-link link-body-emphasis px-2">Tanggapan</a></li>
+            <li class="nav-item"><a href="tanggapan" class="nav-link link-body-emphasis px-2">Data Petugas</a></li>
 
         </ul>
         <ul class="nav">
