@@ -25,7 +25,7 @@
                                     <td>{{ $item->isi_laporan }}</td>
                                     <td>
                                         <div class="d-flex gap-2 mb-3">
-                                            <button type="button"  class="btn btn-primary"> Cek Laporan</button>
+                                            <a href="{{url('admin/status/'.$item->id_pengaduan )}}" class="btn btn-primary">Validasi</a>
                                             
                                         </div>
                                     </td>
@@ -40,10 +40,7 @@
     <script src="/datatable/datatables.min.js"></script>
     <script>
         $('#tb_validasi').DataTable({
-            dom: 'Bfrtip',
-            buttons: [
-                'copy', 'excel', 'pdf'
-            ]
+           
         });
     </script>
 @endsection

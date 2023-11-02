@@ -23,6 +23,10 @@ class MasyarakatController extends Controller
         // buat objek 
             return view('Masyarakat.registrasi');
     }
+    public function logout(){
+        session()->flush();
+        return redirect('/masyarakat/dashboard');
+    }
     public function data(Request $request){
             // cek data yang dikirimkan
             $tes = $request->validate([
@@ -57,7 +61,7 @@ class MasyarakatController extends Controller
                 'username'=>$request->input('username'),
                 'password'=>($request->input('password'))
             ]);
-            return redirect('/masyarakat/dashboard');
+            return redirect('/masyarakat/dashboardl');
          }
          return back()->with('pesan','username atau password salah');
          

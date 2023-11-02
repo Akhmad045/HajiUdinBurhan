@@ -22,9 +22,6 @@ use Illuminate\Support\Facades\Route;
 route::get('masyarakat', [MasyarakatController::class, 'index']);
 // grup  masyarakat
 route::prefix('masyarakat')->group(function () {
-    Route::get('/',function(){
-        return view('masyarakat.dashboard');
-    })->middleware(MasyarakatMiddleware::class);
     // dashboard masyarakat
     route::get('dashboard', [MasyarakatController::class, 'dashboard']);
     // registrasi
@@ -37,22 +34,27 @@ route::prefix('masyarakat')->group(function () {
     route::get('login', [MasyarakatController::class, 'login']);
     route::post('login', [MasyarakatController::class, 'ceklogin']);
     // halaman sesudah login
-    route::get('dashboardl',[MasyarakatController::class,'dash']);
+    route::get('dashboardl',[MasyarakatController::class,'dash'])->middleware(MasyarakatMiddleware::class);
+    // logout
+    route::get('logout',[MasyarakatController::class,'logout']);
     
 
 });
 route::prefix('admin')->group(function () {
-    route::get('/',function(){
-        return view('admin.utama');
-    })->middleware(AdminMiddleware::class);
     // dashboard admin
-    route::get('utama',[AdminController::class,'dashboard']);
+    route::get('utama',[AdminController::class,'dashboard'])->middleware(AdminMiddleware::class);
     //validasi
     route::get('validasi', [AdminController::class, 'validasi']);
+    route::get('status/{id}', [AdminController::class, 'status']);
     //tanggapan
     route::get('tanggapan', [AdminController::class, 'tanggapan']);
     route::post('tanggapan', [AdminController::class, 'tanggapan']);
+    // registrasi admin dan petugas
+    route::get('registrasi', [AdminController::class,'registrasi']);
+    route::post('registrasi', [AdminController::class,'registrasi_admin']);
     //login admin
     route::post('login', [AdminController::class, 'celogin']);  
     route::get('login', [AdminController::class, 'ceklogin']);
+    // logout
+    route::get('logout',[AdminController::class,'logout']);
 });

@@ -13,6 +13,7 @@
                                 <th>Nik</th>
                                 <th>Tanggal Pengaduan</th>
                                 <th>Isi Laporan</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -23,6 +24,7 @@
                                     <td>{{ $item->nik }}</td>
                                     <td>{{ $item->tanggal_pengaduan }}</td>
                                     <td>{{ $item->isi_laporan }}</td>
+                                    <td></td>
                                     <td></td>
                                 </tr>
                             @endforeach
@@ -35,10 +37,7 @@
     <script src="/datatable/datatables.min.js"></script>
     <script>
         $('#tanggapan').DataTable({
-            dom: 'Bfrtip',
-            buttons: [
-                'copy', 'excel', 'pdf'
-            ]
+           
         });
     </script>
 @endsection
