@@ -8,25 +8,6 @@
   <a class="btn btn-primary btn-lg" href="validasi" role="button">Lihat Laporan</a>
 </div>
 
-<!-- Fitur Layanan -->
-<div id="features" class="features">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-4">
-              <h3>Fitur Validasi</h3>
-              <p>Anda dapat menggunakan fitur tersebut untuk validasi laporan masyarakat.</p>
-          </div>
-          <div class="col-md-4">
-              <h3>Fitur Tanggapan</h3>
-              <p>Fitur ini digunakan untuk menanggapi seluruh laporan yang sudah di validasi.</p>
-          </div>
-          <div class="col-md-4">
-              <h3>Fitur </h3>
-              <p></p>
-          </div>
-      </div>
-  </div>
-</div>
 <div class="container">
     <div class="card shadow">
         <div class="card-header text-bg-white">
@@ -40,7 +21,6 @@
                             <th>Tanggal Pengaduan</th>
                             <th>Isi Laporan</th>
                             <th>Status</th>
-                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -62,7 +42,7 @@
                                             tertunda
                                     @endswitch
                                 </td>
-                                <td></td>
+                            
                             </tr>
                         @endforeach
                     </tbody>

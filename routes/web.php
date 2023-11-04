@@ -34,7 +34,7 @@ route::prefix('masyarakat')->group(function () {
     route::get('login', [MasyarakatController::class, 'login']);
     route::post('login', [MasyarakatController::class, 'ceklogin']);
     // halaman sesudah login
-    route::get('dashboardl',[MasyarakatController::class,'dash'])->middleware(MasyarakatMiddleware::class);
+    route::get('dashboardl',[MasyarakatController::class,'dash']);
     // logout
     route::get('logout',[MasyarakatController::class,'logout']);
     
@@ -42,7 +42,8 @@ route::prefix('masyarakat')->group(function () {
 });
 route::prefix('admin')->group(function () {
     // dashboard admin
-    route::get('utama',[AdminController::class,'dashboard'])->middleware(AdminMiddleware::class);
+    route::get('utama',[AdminController::class,'dashboard']);
+    //->middleware(AdminMiddleware::class);
     //validasi
     route::get('validasi', [AdminController::class, 'validasi']);
     route::get('status/{id}', [AdminController::class, 'status']);
@@ -57,4 +58,7 @@ route::prefix('admin')->group(function () {
     route::get('login', [AdminController::class, 'ceklogin']);
     // logout
     route::get('logout',[AdminController::class,'logout']);
+    //formtanggapan
+    route::get('formtanggapan',[AdminController::class,'form']);
+    route::post('formtanggapan',[AdminController::class,'forml']);
 });

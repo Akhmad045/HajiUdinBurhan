@@ -27,7 +27,7 @@
 <nav class="py-2 bg-body-tertiary border-bottom">
     <div class="container d-flex flex-wrap">
         <ul class="nav me-auto">
-            <li class="nav-item"><a href="dashboard" class="nav-link link-body-emphasis px-2 active"
+            <li class="nav-item"><a href="dashboardl" class="nav-link link-body-emphasis px-2 active"
                     aria-current="page">Home</a></li>
 
         </ul>

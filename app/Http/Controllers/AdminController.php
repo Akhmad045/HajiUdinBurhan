@@ -44,7 +44,7 @@ class AdminController extends Controller
                 'username'=>$request->input('username'),
                 'password'=>($request->input('password'))
             ]);
-            return redirect('/admin/login');
+            return redirect('/admin/utama');
         }
         return back()->with('pesan','username atau password salah');
     }
@@ -61,11 +61,17 @@ class AdminController extends Controller
         ]);
         $m->create($request->all());
         if ($m->where('username',$request->input('username'))->where('password',$request->input('password'))->exists()){
-            return redirect('admin/registrasi')->with('pesan','Selamat, berhasil registrasi');
+            return redirect('admin/registrasi')->with('pesan','Selamat, petugas berhasil ditambahkan');
         }
     }
     public function logout(){
         session()->flush();
         return redirect('/admin/login');
+    }
+    public function form(){
+        return view('Admin.formtanggapan');
+    }
+    public function forml(Request $request){
+        
     }
 }

@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <title>Admin Login</title>
+    
 </head>
 <body>
+
     <div id="main" class="d-flex align-items-center vh-100">
         <div class="container">
             <div class="card shadow m-auto" style="width: 400px">

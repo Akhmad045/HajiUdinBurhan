@@ -24,8 +24,23 @@
                                     <td>{{ $item->nik }}</td>
                                     <td>{{ $item->tanggal_pengaduan }}</td>
                                     <td>{{ $item->isi_laporan }}</td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>
+                                    @switch($item->status)
+                                        @case('proses')
+                                            proses
+                                            @break
+                                        @case('selesai')
+                                            selesai
+                                            @break
+                                        @default
+                                            tertunda
+                                    @endswitch
+                                </td>
+
+                                    <td><div class="d-flex gap-2 mb-3">
+                                            <a href="formtanggapan" class="btn btn-primary">Cek Laporan</a>
+                                            
+                                        </div></td>
                                 </tr>
                             @endforeach
                         </tbody>
